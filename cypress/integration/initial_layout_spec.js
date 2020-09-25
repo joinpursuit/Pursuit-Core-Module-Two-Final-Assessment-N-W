@@ -1,7 +1,4 @@
 describe('Initial Layout', () => {
-  before(() => {
-    cy.visit('./index.html')
-  })
   it('has a header reading Ghibli Review App', () => {
     cy
     .get("h1:first-of-type")
@@ -40,6 +37,18 @@ describe('Initial Layout', () => {
         'When Marnie Was There'
       ]
       expect(actual.sort()).to.deep.eq(expected.sort())
+    })
+  })
+  it('has an empty div', () => {
+    cy
+    .get('div')
+    .should('exist')
+  })
+  it('has a form with a text input and a submit input', () => {
+    cy
+    .get('form > input')
+    .then((inputs) => {
+      expect([...inputs].map(i => i.type)).to.have.members(["text", "submit"])
     })
   })
 })
