@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/joinpursuit/Pursuit-Core-Module-Two-Final-Assessment/issues"
   },
-  "homepage": "https://github.com/joinpursuit/Pursuit-Core-Module-Two-Final-Assessment#readme"
+  "homepage": "https://github.com/joinpursuit/Pursuit-Core-Module-Two-Final-Assessment#readme",
+  "devDependencies": {
+    "cypress": "^5.2.0"
+  }
 }
