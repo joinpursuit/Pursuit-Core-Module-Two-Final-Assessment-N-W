@@ -1,0 +1,19 @@
+{
+  "name": "module-two-final",
+  "version": "1.0.0",
+  "description": "Create an app using the [Studio Ghibli API](https://ghibliapi.herokuapp.com/#) that allows users to view and review each movie.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joinpursuit/Pursuit-Core-Module-Two-Final-Assessment.git"
+  },
+  "author": "Ben Stone",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/joinpursuit/Pursuit-Core-Module-Two-Final-Assessment/issues"
+  },
+  "homepage": "https://github.com/joinpursuit/Pursuit-Core-Module-Two-Final-Assessment#readme"
+}
