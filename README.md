@@ -17,7 +17,7 @@
   * Submit the link to your pull request on Canvas. 
 
 
-Edit `index.html` to add the required functionality for each of the questions.
+## Assessment Details
 
 Create an app using the [Studio Ghibli API](https://ghibliapi.herokuapp.com/#) that allows users to view and review each movie.
 
