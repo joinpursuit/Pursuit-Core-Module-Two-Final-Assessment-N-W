@@ -1,4 +1,23 @@
-# Movie App
+[![Pursuit Logo](https://avatars1.githubusercontent.com/u/5825944?s=200&v=4)](https://pursuit.org)
+
+# Pursuit-Core-Module-Two-Final-Assessment
+
+## Getting Started 
+* Fork this repo
+* Clone the forked repository
+* `cd` to the directory where you cloned it
+* `npm install` to install dependencies
+* `npm test` to open the cypress testing window
+
+> *Note*: Remember to `git add`, `git commit` and `git push` regularly
+
+## Submission Guidelines
+  * When finished, commit and push your work.
+  * Make a pull request on github.
+  * Submit the link to your pull request on Canvas. 
+
+
+Edit `index.html` to add the required functionality for each of the questions.
 
 Create an app using the [Studio Ghibli API](https://ghibliapi.herokuapp.com/#) that allows users to view and review each movie.
 
@@ -46,7 +65,3 @@ Your website should be responsive and work on screens of different sizes.
 Your app should end up looking something like this:
 
 ![screen](./screen.png)
-
-## Rubric
-
-![Unit2AssessmentRubric](./Unit2AssessmentRubric.png)
