@@ -34,7 +34,8 @@ describe('Initial Layout', () => {
         'From Up on Poppy Hill',
         'The Wind Rises',
         'The Tale of the Princess Kaguya',
-        'When Marnie Was There'
+        'When Marnie Was There', 
+        "The Red Turtle"
       ]
       expect(actual.sort()).to.deep.eq(expected.sort())
     })
