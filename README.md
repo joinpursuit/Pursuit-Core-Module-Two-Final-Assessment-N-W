@@ -26,15 +26,15 @@ This app should have (in order of placement in the HTML):
 - An image of the [Studio Ghibli logo](https://upload.wikimedia.org/wikipedia/en/thumb/c/ca/Studio_Ghibli_logo.svg/1200px-Studio_Ghibli_logo.svg.png)
 - A header (`h1`) that reads "Ghibli Review App"
 - A `select` box that contains the title of each movie available in the API, as well as a default blank selection
-- A `div`, empty at first, that will contain the title (`h3`), release year (`p`), and description (`p`) of the selected film.
-- A `form`, including a "text" `input` and a "submit" `input`, that allows users to submit (not save, just add to the frontend) a review of that film.
+- A `section`, empty of text and with the `display-info`, that will contain the title (`h3`), release year (`p`), and description (`p`) of the selected film.
+- A `form`, including a "text" `input` and a "submit" `input`, that allows users to submit (not save, just add to the frontend) a review of that film. On submission the input should clear.
 - A `ul` underneath that `form` that should contain the submitted reviews of each film.
 
-Please feel free to include additional `div`s and elements if they make styling the application easier.
+Please feel free to include additional `sections`s and elements if they make styling the application easier.
 
 The user should be able to:
 
-- Use the `select` box to select a specific film. When they select a film, information about that film (title, release year, description) should populate in the `div` below. When they select a different film, this information should be replaced.
+- Use the `select` box to select a specific film. When they select a film, information about that film (title, release year, description) should populate in the `display-info` section below. When they select a different film, this information should be replaced.
 - Use the `form`, below the movie information, to submit a review. Each review should be a new `li`, with the selected film's title (in bold) and a review body (not bold).
 
 ## Styling
