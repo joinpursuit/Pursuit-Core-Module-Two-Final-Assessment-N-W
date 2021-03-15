@@ -64,6 +64,10 @@ describe("Core interaction", () => {
     cy.contains(description).should("exist");
   });
 
+  it("has display-info section include correct count of children", () => {
+    cy.get("#display-info").children().should("have.length", 3);
+  });
+
   it("still shows previous reviews", () => {
     cy.get("li").then((items) => {
       const actual = items[0].innerHTML;

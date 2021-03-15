@@ -59,9 +59,7 @@ describe("Initial Layout", () => {
       expect($div.get(0).innerText).to.eq("");
     });
   });
-  it("has display-info section include correct count of children", () => {
-    cy.get("#display-info").children().should("have.length", 3);
-  });
+
   it("has a form with a text input and a submit input", () => {
     cy.get("form > input").then((inputs) => {
       expect([...inputs].map((i) => i.type)).to.have.members([
