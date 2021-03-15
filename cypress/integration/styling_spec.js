@@ -10,7 +10,6 @@ describe("Styling", () => {
     cy.get("header")
       .should("have.css", "background-color", "rgb(135, 206, 235)")
       .should("have.css", "height", "150px")
-      .should("have.css", "display", "flex");
   });
   it("image has width of 150px", () => {
     cy.get("img").should("have.css", "height", "150px");
