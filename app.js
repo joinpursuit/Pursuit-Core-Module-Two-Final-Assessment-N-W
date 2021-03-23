@@ -1,0 +1,1 @@
+//curl https://ghibliapi.herokuapp.com
