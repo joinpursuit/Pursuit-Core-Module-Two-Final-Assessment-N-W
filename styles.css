@@ -1,0 +1,21 @@
+body {
+    background-color: lavender;
+    font-family: monospace;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+header {
+    width: 70%;
+    height: 150px;
+    background-color: skyblue;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img{
+    height: 150px;
+}
