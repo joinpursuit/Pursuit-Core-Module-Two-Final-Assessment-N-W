@@ -32,4 +32,11 @@ const createOptions = async () => {
       descriptions.innerText = filmsByID.data.description
   })
 
-  
+  form.addEventListener("submit", (e) => {
+      e.preventDefault();
+      const review = document.querySelector("#review")
+      const li = document.createElement("li");
+      li.innerHTML = `<b>${title.textContent}:</b> ${review.value}`
+      reviews.appendChild(li);
+      review.value = "";
+  })
