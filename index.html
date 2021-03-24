@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="index.js" defer></script>
+    <link rel="stylesheet" href="./index.css" />
+    <title>Studio Ghibli Review App!</title>
+</head>
+<body>
+<header>
+<img src="https://upload.wikimedia.org/wikipedia/en/thumb/c/ca/Studio_Ghibli_logo.svg/1200px-Studio_Ghibli_logo.svg.png">
+<h1>Ghibli Review App</h1>   
+</header>
+<main>
+<select id="movie-selector">
+    <option disabled selected value></option>
+</select>
+<section id="display-info">
+    <h3 id="title-h3"></h3>
+    <p id="release-year-p"></p>
+    <p id="description-p"></p>
+</section>
+<form>
+    <input id="review-input" type="text">
+    <input id="review-submit" type="submit" value="Submit Review">
+</form>
+<ul id="submitted-reviews-ul"></ul>
+</main>    
+</body>
+</html>
