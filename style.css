@@ -1,0 +1,36 @@
+body{
+    background-color: lavender;
+    display: flex;
+    align-items: center;
+}
+
+header{
+    width: 70%;
+    height: 150px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    padding: 10px;
+    background-color: skyblue;
+}
+header img{
+    height: 150px;
+}
+header h1{
+    font-family: monospace;
+}
+
+main{
+    width: 60%;
+    display: flex;
+    align-self: flex-end;
+    justify-content: left;
+}
+
+input[type="text"]{
+    width: 400px;
+}
+
+select {
+    height: 50px;
+}
