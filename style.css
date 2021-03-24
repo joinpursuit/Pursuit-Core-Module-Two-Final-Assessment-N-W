@@ -10,6 +10,7 @@ header {
     width: 70%;
     height: 150px;
     display: flex;
+    align-items: center;
     justify-content: space-between;
     margin-bottom: 30px;
     padding: 10px 10px;
