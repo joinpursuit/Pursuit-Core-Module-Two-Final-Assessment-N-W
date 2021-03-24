@@ -9,33 +9,43 @@
     <title>Ghibli Review App</title>
 </head>
 <div>
-<img src="https://upload.wikimedia.org/wikipedia/en/thumb/c/ca/Studio_Ghibli_logo.svg/1200px-Studio_Ghibli_logo.svg.png" alt="Ghibli Logo"/>
+<img class="logo" src="https://upload.wikimedia.org/wikipedia/en/thumb/c/ca/Studio_Ghibli_logo.svg/1200px-Studio_Ghibli_logo.svg.png" alt="Ghibli Logo"/>
 </div>
 <body>
 
     <header>
+
         <div>
         <h1>Ghibli Review App</h1>
     </div>
-        <select>
-            <option disabled selected></option>
+    <!-- all titles here -->
+        <select id="all-movie-titles"> 
+            <option  disabled selected></option>
         </select>
+
     </header>
     
     <main>
+
+    </header>
+
+    <ul id="all-titles"></ul>
+    
+    <main>
+        
     <section id="display-info">
         <!-- title of movie <h3> -->
-     <h3></h3>
+     <h3 id="title"></h3>
      <!-- release year of movie <p> -->
-     <p></p>
+     <p id="release-year"></p>
      <!-- description of selected film  -->
-     <p></p>
+     <p id="description"></p>
     </section>
 
     <form>
 
         <!-- user input -->
-     <input type="text">
+     <input id="userInput" type="text">
 
      <!-- submit allows user to submit not add the input to the screen,after entered should clear -->
      <input type="submit">
@@ -43,7 +53,7 @@
     </form>
 
     <!-- ul contains submitted reviews, need to append li in the ul here -->
-    <ul></ul>
+    <ul id="comments"></ul>
 </main>
 </body>
 </html>
