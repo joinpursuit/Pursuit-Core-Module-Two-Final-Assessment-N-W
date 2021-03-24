@@ -24,11 +24,16 @@ const getAllMovies = async () => {
 getAllMovies()
 
 allMovies.addEventListener("change", async (e) => {
-    const url = `https://ghibliapi.herokuapp.com/films/${e.target.value}`
-    const res = await axios.get(url);
-    title.textContent = res.data.title
-    releaseDate.textContent = res.data.release_date;
-    descriptions.textContent = res.data.description
+    try {
+        const url = `https://ghibliapi.herokuapp.com/films/${e.target.value}`
+        const res = await axios.get(url);
+        title.textContent = res.data.title
+        releaseDate.textContent = res.data.release_date;
+        descriptions.textContent = res.data.description
+    } catch (err) {
+        console.log(err)
+    }
+
 })
 
 form.addEventListener("submit", (e) => {
