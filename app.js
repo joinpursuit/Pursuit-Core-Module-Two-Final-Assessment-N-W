@@ -1,4 +1,5 @@
 // https://ghibliapi.herokuapp.com
+// https://ghibliapi.herokuapp.com/films/{id}
 
 // selectors
 const select = document.querySelector("select");
@@ -7,12 +8,11 @@ const input = document.querySelector("#user-review");
 const ul = document.querySelector("ul");
 const form = document.querySelector("form");
 
-const title = document.querySelector(".title");
+const title = document.querySelector(".titleH3");
 const year = document.querySelector(".release-year");
 const description = document.querySelector(".description");
 
 // functions
-// get movie list
 const getMovies = async (e) => {
 	try {
 		const movieList = await axios.get("https://ghibliapi.herokuapp.com/films");
@@ -21,36 +21,71 @@ const getMovies = async (e) => {
 			const movieTitle = movie.title;
 			// create option
 			const option = document.createElement("option");
-			option.textContent = movieTitle;
-			// option.value = movie.id;
+			option.innerHTML = movieTitle;
 			select.appendChild(option);
 		});
-		// released = movieList.data.release_date;
-		// description = movieList.data.description;
-		// id = movieList.data.id;
 	} catch (error) {
 		console.log(error);
 	}
 };
 
 const getMovieInfo = async (e) => {
-	const selectedMovie = e.target.value;
-	// movie title -- h3
-	title.textContent = selectedMovie;
-	section.appendChild(title);
+	let count = 0;
+	try {
+		const movieList = await axios.get("https://ghibliapi.herokuapp.com/films");
+		let selectedMovie = e.target.value;
+		// movie title -- h3
+		title.innerHTML = `<b>${selectedMovie}</b>`;
+		section.appendChild(title);
 
-	// release year -- p
+		movieList.data.forEach((listTitle) => {
+			const eachTitle = listTitle.title;
 
-	// description
+			if (selectedMovie === eachTitle) {
+				id = movieList.data[count].id;
+
+				const getData = async (e) => {
+					try {
+						const filmId = await axios.get(
+							`https://ghibliapi.herokuapp.com/films/${id}`
+						);
+
+						// release year -- p
+						year.textContent = filmId.data.release_date;
+						section.appendChild(year);
+						// description
+						description.textContent = filmId.data.description;
+						section.appendChild(description);
+					} catch (error) {
+						console.log(error);
+					}
+				};
+				getData();
+			}
+			count++;
+		});
+		// remove li nodes from ul
+        const clearUl = () => {
+            if (ul.childElementCount > 0) {
+                for (let i = 0; i < ul.childElementCount; i++) {
+                    let li = ul.childNodes[i];
+                    li.remove();
+                }
+            }
+        };
+		clearUl();
+	} catch (error) {
+		console.log(error);
+	}
 };
 
 const printReview = (e) => {
-    e.preventDefault();
+	e.preventDefault();
 	const review = input.value;
 	const li = document.createElement("li");
 	li.textContent = review;
-    ul.appendChild(li);
-    input.value = "";
+	ul.appendChild(li);
+	input.value = "";
 };
 
 // event listeners
