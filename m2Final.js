@@ -7,6 +7,9 @@ const reviewSubmission = document.querySelector("#review-submit");
 
 const createOptions = async () => {
   try {
+    const option = document.createElement("option");
+    option.textContent = "";
+    select.appendChild(option);
     const res = await axios.get("https://ghibliapi.herokuapp.com/films/");
     res.data.forEach((movie) => {
       const option = document.createElement("option");
@@ -41,15 +44,15 @@ select.addEventListener("change", (e) => {
 });
 
 const submitReview = () => {
-      const li = document.createElement("li");
-      const reviewInput = document.querySelector("#user-review");
-      li.classList.add("film-reviews");
-      li.innerHTML = `<b>${chosenTitle.textContent}:</b> ${reviewInput.value}`;
-      reviewList.appendChild(li);
-      reviewInput.value = "";
-}
+  const li = document.createElement("li");
+  const reviewInput = document.querySelector("#user-review");
+  li.classList.add("film-reviews");
+  li.innerHTML = `<b>${chosenTitle.textContent}:</b> ${reviewInput.value}`;
+  reviewList.appendChild(li);
+  reviewInput.value = "";
+};
 
 reviewSubmission.addEventListener("click", (e) => {
-    e.preventDefault();
-    submitReview();
-})
+  e.preventDefault();
+  submitReview();
+});

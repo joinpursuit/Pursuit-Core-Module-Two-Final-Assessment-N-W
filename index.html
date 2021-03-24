@@ -1,35 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./styling.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styling.css" />
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="./m2Final.js" defer></script>
     <title>Module 2 Final Assessment</title>
-</head>
-<body>
+  </head>
+  <body>
     <header>
-        <img src="./images/1200px-Studio_Ghibli_logo.svg.png" id="ghilbi-logo" alt="Image is icon logo of the Ghibli Studio.">
-        <h1>Ghilbli Review App</h1>
+      <img
+        src="https://upload.wikimedia.org/wikipedia/en/thumb/c/ca/Studio_Ghibli_logo.svg/1200px-Studio_Ghibli_logo.svg.png"
+        id="ghilbi-logo"
+        alt="Image is icon logo of the Ghibli Studio."
+      />
+      <h1>Ghibli Review App</h1>
     </header>
-        
-    <select name="" id="movie-titles"></select>
+
+    <main>
+        <select name="" id="movie-titles"></select>
     
-    <section id="display-info">
-        <h3 id="selected-title"></h3>
-        <p id="release-yr"></p>
-        <p id="film-description"></p>
-    </section>
+        <section id="display-info">
+          <h3 id="selected-title"></h3>
+          <p id="release-yr"></p>
+          <p id="film-description"></p>
+        </section>
+    
+        <form action="">
+          <input type="text" name="" id="user-review" />
+          <!-- <label for="review-submit">Submit Review</label> -->
+          <input type="submit" name="" id="review-submit" value="Submit Review" />
+        </form>
 
-    <form action="">
-        <input type="text" name="" id="user-review">
-        <!-- <label for="review-submit">Submit Review</label> -->
-        <input type="submit" name="" id="review-submit" value="Submit Review">
-    </form>
+        <ul id="review-list"></ul>
+    </main>
 
-    <ul id="review-list"></ul>
-
-</body>
+  </body>
 </html>
