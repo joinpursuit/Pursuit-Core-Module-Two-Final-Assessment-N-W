@@ -6,15 +6,36 @@ body {
     justify-content: center;
     flex-direction: column;
     align-content: center;
+    margin-left: 50px;
 }
 
 header {
     display: flex;
     justify-content: space-between;
-    background-color: rgb(135, 206, 235);
+    align-items: center;
     height: 150px;
+    width: 70%;
+    margin-bottom: 30px;
+    padding: 10px;
+    background-color: skyblue;
 }
 
 img {
     height: 150px;
+}
+
+main {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 80px;
+}
+
+.text {
+    width: 400px;
+}
+
+select {
+    width: 200px;
 }
