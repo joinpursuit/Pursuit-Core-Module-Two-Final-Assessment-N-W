@@ -24,3 +24,7 @@ main {
   flex-direction: column;
   justify-content: left;
 }
+
+ul {
+  width: 400px;
+}
