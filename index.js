@@ -29,7 +29,6 @@ const movieSelection = async (e) => {
     const res = await axios.get(
       `https://ghibliapi.herokuapp.com/films/${e.target.value}`
     );
-    const movieTitle = document.querySelector("#movie-title");
     movieTitle.textContent = res.data.title;
     releaseYear.textContent = res.data.release_date;
     description.textContent = res.data.description;
@@ -52,12 +51,13 @@ const movieReview = (e) => {
   li.innerHTML = `<b>${movieTitle.textContent}</b>: ${movieReview.value}`;
   submittedReviews.appendChild(li);
   movieReview.value = "";
+
 };
 
 const form = document.querySelector("form");
 form.addEventListener("submit", movieReview);
 
-const main = document.querySelector("main");
-main.addEventListener("click", movieSelection);
+const select = document.querySelector("select");
+select.addEventListener("change", movieSelection);
 
 movieDirectory();
