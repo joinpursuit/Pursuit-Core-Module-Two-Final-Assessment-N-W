@@ -1,0 +1,13 @@
+#ghilbi-logo {
+    height: 100px;
+}
+
+body {
+    display: grid;
+    /* display: flex; */
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+}
