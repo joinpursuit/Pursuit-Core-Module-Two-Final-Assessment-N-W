@@ -1,5 +1,6 @@
 const movieTitle = document.querySelector("#movie-title");
 
+// get request for heroku movies
 const movieDirectory = async () => {
   try {
     const res = await axios.get("https://ghibliapi.herokuapp.com/films/");
@@ -9,25 +10,26 @@ const movieDirectory = async () => {
   }
 };
 
-// `select` box that contains the title of each movie, as well as a default blank selection
+// drop down menu of movie titles with blank option as default
 const movieList = (res) => {
   res.data.forEach((movie) => {
     const select = document.querySelector("select");
     const option = document.createElement("option");
-    option.value = movie.id;
+    option.value = movie.id; // assign id to select item later
     option.textContent = movie.title;
     select.appendChild(option);
   });
 };
 
-// select a specific film and display the title, release year, description. When a different film is selected, the information is replaced.
+// display the title, release year, description of selected movie.
+// update when another movie is selected.
 const movieSelection = async (e) => {
   const blank = document.querySelector("#blank");
   const releaseYear = document.querySelector("#release-year");
   const description = document.querySelector("#description");
   try {
     const res = await axios.get(
-      `https://ghibliapi.herokuapp.com/films/${e.target.value}`
+      `https://ghibliapi.herokuapp.com/films/${e.target.value}` // change endpoint upon selection
     );
     movieTitle.textContent = res.data.title;
     releaseYear.textContent = res.data.release_date;
@@ -38,25 +40,22 @@ const movieSelection = async (e) => {
   }
 };
 
-// - A `form`, including a "text" `input` and a "submit" `input`, that allows users to submit (not save, just add to the frontend) a review of that film. On submission the input should clear.
-// - A `ul` underneath that `form` that should contain the submitted reviews of each film.
-
-// - Use the `form`, below the movie information, to submit a review. Each review should be a new `li`, with the selected film's title (in bold) and a review body (not bold).
-
+// display each user review with movie title in list form
 const movieReview = (e) => {
   e.preventDefault();
-  const movieReview = document.querySelector("#movie-review");
+  const movieReview = document.querySelector('form > input[type="text"]');
   const submittedReviews = document.querySelector("#submitted-reviews");
   const li = document.createElement("li");
-  li.innerHTML = `<b>${movieTitle.textContent}</b>: ${movieReview.value}`;
+  li.innerHTML = `<b>${movieTitle.textContent}:</b> ${movieReview.value}`;
   submittedReviews.appendChild(li);
   movieReview.value = "";
-
 };
 
-const form = document.querySelector("form");
-form.addEventListener("submit", movieReview);
+// submit review
+const enter = document.querySelector('form > input[type="submit"]');
+enter.addEventListener("click", movieReview);
 
+// select movie title
 const select = document.querySelector("select");
 select.addEventListener("change", movieSelection);
 
