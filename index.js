@@ -12,18 +12,15 @@ const createOptions = async () => {
         res.data.forEach(film => {
             const option = document.createElement("option");
             option.textContent = film.title;
-            option.value = film.id; // index of film in film array!! figure out how to use this
+            option.value = film.id;
             options.appendChild(option)
         });
-
-
     } catch (err) {
         console.log(err)
     }
   };
   createOptions();
 
-  //should this event listener go inside of create options?
   options.addEventListener("change", async (e) => {
       const url = `https://ghibliapi.herokuapp.com/films/${e.target.value}`;
       const filmsByID = await axios.get(url);
