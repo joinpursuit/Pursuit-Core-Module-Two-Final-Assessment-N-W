@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="index.js" defer></script>
+    <link rel="stylesheet" href="index.css">
+
+    <title>Ghibli Review App</title>
+</head>
+<body>
+    <header>
+        <img src="https://upload.wikimedia.org/wikipedia/en/thumb/c/ca/Studio_Ghibli_logo.svg/1200px-Studio_Ghibli_logo.svg.png" alt="studioghiblilogo">
+        <h1>Ghibli Review App</h1>
+    </header>
+    <main>
+        <select name="ghiblimovieselectiong" id="ghibli-sovie-selection">
+            <option disabled selected value style="display:none"></option>
+        </select>
+        <section id="display-info">
+            <h3 id="movie-title"></h3>
+            <p id="release-date"></p>
+            <p id="description"></p>
+        </section>
+        <section>
+            <form >
+                <input type="text" id="review">
+                <input type="submit">
+            </form>
+        </section>
+        <ul id="movie-reviews-ul"></ul>
+    </main>
+</body>
+</html>
