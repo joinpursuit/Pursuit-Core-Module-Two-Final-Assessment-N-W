@@ -13,14 +13,14 @@ const description = document.querySelector("#description");
 const ghible = async () => {
   try {
     const res = await axios.get("https://ghibliapi.herokuapp.com/films");
-    // debugger
-    select.innerHTML =""
+    select.value =""
+    debugger
     res.data.forEach((info) => {
-      const option = document.createElement("option");
-      option.innerText = info.title;
-      option.value = info.id;
-      select.appendChild(option);
-      debugger
+        const option = document.createElement("option");
+        option.innerText = info.title;
+        option.value = info.id;
+        select.appendChild(option);
+        debugger
     });
   } catch (err) {
     console.log(err);

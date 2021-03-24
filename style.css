@@ -1,16 +1,15 @@
 body{
     background-color: lavender;
-    display: flex;
-    align-items: center;
+   
 }
 
 header{
     width: 70%;
     height: 150px;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     margin-bottom: 30px;
-    padding: 10px;
+    padding: 10px 10px 10px 10px;
     background-color: skyblue;
 }
 header img{
@@ -22,15 +21,19 @@ header h1{
 
 main{
     width: 60%;
+    margin: 30px 100px 30px 100px;
+}
+select {
+    height: 30px;
     display: flex;
-    align-self: flex-end;
     justify-content: left;
+}
+section{
+    display: flex;
+    justify-content: left;
+    flex-direction: column;
 }
 
 input[type="text"]{
     width: 400px;
-}
-
-select {
-    height: 50px;
 }
