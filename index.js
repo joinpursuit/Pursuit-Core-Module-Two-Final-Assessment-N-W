@@ -40,3 +40,16 @@ select.addEventListener("change", async (e) => {
   year.innerHTML = film.data.release_date;
   desc.textContent = film.data.description;
 });
+
+const form = document.querySelector("#rev-form")
+const input = document.querySelector("#review")
+const ul = document.querySelector("#reviews")
+
+form.addEventListener("submit", (e) => {
+    e.preventDefault()
+    const li = document.createElement("li")
+    li.innerHTML = `<b>${title.textContent}:</b> ${input.value}`
+    ul.appendChild(li)
+    
+    input.value = ''
+})
