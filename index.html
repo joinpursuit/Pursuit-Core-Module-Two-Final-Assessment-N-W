@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src= "app.js" defer></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Ghibli Review App</title>
+</head>
+<div>
+<img src="https://upload.wikimedia.org/wikipedia/en/thumb/c/ca/Studio_Ghibli_logo.svg/1200px-Studio_Ghibli_logo.svg.png" alt="Ghibli Logo"/>
+</div>
+<body>
+
+    <header>
+        <div>
+        <h1>Ghibli Review App</h1>
+    </div>
+        <select>
+            <option disabled selected></option>
+        </select>
+    </header>
+    
+    <main>
+    <section id="display-info">
+        <!-- title of movie <h3> -->
+     <h3></h3>
+     <!-- release year of movie <p> -->
+     <p></p>
+     <!-- description of selected film  -->
+     <p></p>
+    </section>
+
+    <form>
+
+        <!-- user input -->
+     <input type="text">
+
+     <!-- submit allows user to submit not add the input to the screen,after entered should clear -->
+     <input type="submit">
+
+    </form>
+
+    <!-- ul contains submitted reviews, need to append li in the ul here -->
+    <ul></ul>
+</main>
+</body>
+</html>
+
+<!-- A header (`h1`) that reads "Ghibli Review App" check
+- A `select` box that contains the title of each movie available in the API, as well as a default blank selection
+- A `section`, empty of text and with the id `display-info`, that will contain the title (`h3`), release year (`p`), and description (`p`) of the selected film.
+- A `form`, including a "text" `input` and a "submit" `input`, that allows users to submit (not save, just add to the frontend) a review of that film. On submission the input should clear.
+- A `ul` underneath that `form` that should contain the submitted reviews of each film. -->

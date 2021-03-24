@@ -1,0 +1,37 @@
+body {
+  font-family: monospace;
+  background-color: lavender;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+header {
+  width: 70%;
+  height: 150px;
+  /* image and header text should be horizontal */
+  margin-bottom: 30px;
+  padding: 10px 10px 10px;
+  background-color: rgb(135, 206, 235);
+  position: inherit;
+}
+
+img {
+  height: 150px;
+}
+
+h1 {
+  display: flex;
+  text-align: right;
+}
+
+input[text="type"] {
+  width: 400px;
+}
+
+main {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+}
