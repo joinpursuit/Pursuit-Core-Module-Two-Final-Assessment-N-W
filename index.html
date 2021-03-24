@@ -7,6 +7,11 @@
     <link rel="stylesheet" href="styles.css" />
     <script src="index.js" defer></script>
     <title>Document</title>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"
+      integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ=="
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
     <header>
@@ -22,17 +27,18 @@
     </header>
 
     <main>
-      <select></select>
+      <select>
+        <!-- <option></option> -->
+      </select>
       <section id="display-info">
-        <h3></h3>
-        <p></p>
-        <p></p>
+        <h3 id="title"></h3>
+        <p id="release-year"></p>
+        <p id="description"></p>
       </section>
 
       <form>
-        <input type="text" />
-        <input type="submit">
-        <button type="submit">Submit Review</button>
+        <input type="text" id="review" />
+        <input type="submit" value="Submit Review" />
       </form>
       <ul></ul>
     </main>
