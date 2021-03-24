@@ -42,4 +42,5 @@ form.addEventListener("submit", async (e) => {
   li.innerText = `${title.textContent} ${input.value}`;
   li.innerHTML = `<b>${title.textContent}:</b> ${input.value}`;
   ul.appendChild(li);
+  input.value = ""
 });
