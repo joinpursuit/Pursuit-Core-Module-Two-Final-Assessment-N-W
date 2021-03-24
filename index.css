@@ -1,0 +1,26 @@
+body {
+    font-family: monospace;
+    background-color: lavender;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background-color: skyblue;
+    width: 70%;
+    height: 150px;
+    display: flex;
+    /* flex-direction: row; */
+    justify-content: center;
+    align-content: center;
+    margin-bottom: 30px;
+    padding: 0 10px;
+}
+
+main {
+    width: 60px;
+    display: flex;
+    flex-direction: column;
+    
+}
+
