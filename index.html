@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./index.css" />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"
+      integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ=="
+      crossorigin="anonymous"
+    ></script>
+    <script src="./index.js" defer></script>
+    <title>Ghibli Review</title>
+  </head>
+
+  <body>
+    <header>
+      <img
+        src="https://upload.wikimedia.org/wikipedia/en/thumb/c/ca/Studio_Ghibli_logo.svg/1200px-Studio_Ghibli_logo.svg.png"
+      />
+      <h1>Ghibli Review App</h1>
+    </header>
+
+    <select name="movie-list" id="movie-list">
+        <option></option>
+    </select>
+
+    <section id="display-info">
+      <h3 id="title"></h3>
+      <p id="release-year"></p>
+      <p id="description"></p>
+    </section>
+
+    <form>
+      <input id="comment" type="text" />
+      <input type="submit" />
+    </form>
+
+    <ul id="comments"></ul>
+  </body>
+</html>
