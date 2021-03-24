@@ -23,16 +23,16 @@ const getAllMovies = async () => {
         console.log(err)
     };
 };
-getAllMovies()
+ getAllMovies()
 
 
-    const getMovieInfo = async (e) => {
+const getMovieInfo = async (e) => {
     try {
     const URL = `https://ghibliapi.herokuapp.com/films/${e.target.value}`;
     const res = await axios.get(URL);
-    movieTitle =  res.data.title;
-    movieRelease = res.data.release_date;
-    movieDescription = res.data.description;
+    movieTitle.textContent =  res.data.title;
+    movieRelease.textContent = res.data.release_date;
+    movieDescription.textContent = res.data.description;
 }  catch (err) {
     console.log(err)
 };
