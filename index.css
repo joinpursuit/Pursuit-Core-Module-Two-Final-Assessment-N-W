@@ -1,0 +1,42 @@
+body{
+    font-family: monospace;
+    background-color: lavender;
+    display: flex;
+    flex-direction: column;
+
+    
+
+}
+
+
+img{
+ 
+    height: 150px;
+}
+#movie-titles{
+    width: 300px;
+    
+}
+
+header{
+    background-color: skyblue;
+    display: flex;
+    width: 70%;
+    justify-content: space-between;
+    padding: 10px;
+    margin-bottom: 30px;
+    height: 150px;
+    align-items: center;
+    align-self: center;
+}
+
+#user-review{
+    width: 400px;
+}
+main{
+    width: 60%;
+    align-self: center;
+    display:flex;
+    flex-direction: column;
+    justify-content: left;
+}
