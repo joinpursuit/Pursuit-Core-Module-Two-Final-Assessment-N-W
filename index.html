@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ghibli Review</title>
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="script.js" defer></script>
 </head> 
 <body>
     <header>
@@ -15,7 +16,9 @@
     </header>
 <main>
     <section>
-        <select></select>
+        <select>
+            <option></option>
+        </select>
     </section>
     <section id="display-info">
         <h3 id="movie-title"></h3>
@@ -23,7 +26,7 @@
         <p id="description"></p>
     </section>
     <section id="input-section">
-        <form id="movie-review">
+        <form id="movie-review-form">
         <input id="comment" type="text">
         <input type="submit"></input>
         </form>

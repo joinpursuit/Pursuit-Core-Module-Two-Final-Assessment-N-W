@@ -11,8 +11,8 @@ const getAllMovies = async () => {
     try {
         const res = await axios.get('https://ghibliapi.herokuapp.com/films');
 
-        res.data.results.forEach(movie => {
-            const opt = document.createElement('opt');
+        res.data.forEach(movie => {
+            const opt = document.createElement('option');
             opt.textContent = movie.title;
             opt.value = movie.id;
             select.appendChild(opt);
@@ -25,26 +25,28 @@ const getAllMovies = async () => {
 };
 getAllMovies()
 
-select.addEventListener('change', async (e) => {
 
-    main.style.display = "flex"
-    const URL = `https://ghibliapi.herokuapp.com/films/${e.target.value}`
+    const getMovieInfo = async (e) => {
+    try {
+    const URL = `https://ghibliapi.herokuapp.com/films/${e.target.value}`;
     const res = await axios.get(URL);
-
-    name.innerText = res.data.name;
-    image.src = res.data.image;
     movieTitle =  res.data.title;
     movieRelease = res.data.release_date;
     movieDescription = res.data.description;
+}  catch (err) {
+    console.log(err)
+};
 
+};
 
-})
+select.addEventListener('change', getMovieInfo);
+
 
 form.addEventListener("submit", (e)=>{
     e.preventDefault();
-    const comment = document.querySelector("#comment")
-    const li = document.createElement("li")
-    li.innerHTML= `<b>${title.textContent}:</b> ${comment.value}`
-    comments.appendChild(li)
+    const comment = document.querySelector("#comment");
+    const li = document.createElement("li");
+    li.innerHTML= `<b>${movieTitle.textContent}:</b> ${comment.value}`;
+    comment.appendChild(li);
     comment.value = "";
-}) 
+});
