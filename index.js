@@ -5,16 +5,13 @@ const description = document.querySelector("#description");
 const form = document.querySelector("form");
 const ul = document.querySelector("ul");
 
-// const blankOption = document.createElement("option")
-//     select.appendChild(blankOption)
-
 const getFilms = async () => {
   try {
     const res = await axios.get("https://ghibliapi.herokuapp.com/films");
-    // select.innerHTML="";
+    const blankOption = document.createElement("option");
+    select.appendChild(blankOption);
     res.data.forEach((film) => {
       const option = document.createElement("option");
-      // console.log(film)
       option.innerText = film.title;
       option.value = film.id;
       select.appendChild(option);
@@ -26,9 +23,8 @@ const getFilms = async () => {
 
 getFilms();
 
-select.addEventListener("click", async (event) => {
-  //console.log(event.target)
-  //debugger
+select.addEventListener("change", async (event) => {
+  event.preventDefault();
   const idUrl = `https://ghibliapi.herokuapp.com/films/${event.target.value}`;
   const res = await axios.get(idUrl);
   h3.innerText = res.data.title;
@@ -39,9 +35,10 @@ select.addEventListener("click", async (event) => {
 form.addEventListener("submit", (event) => {
   event.preventDefault();
   const userReview = document.querySelector("#review");
-  const savedReview = document.createElement("li")
-  savedReview.innerHTML = `<b>${title.textContent}:</b> ${userReview.value}`
+  const savedReview = document.createElement("li");
+  savedReview.innerHTML = `<b>${title.textContent}:</b> ${userReview.value}`;
   ul.appendChild(savedReview);
   userReview.value = "";
-
 });
+
+
