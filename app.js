@@ -67,7 +67,7 @@ const getMovieInfo = async (e) => {
 		// remove li nodes from ul
         const clearUl = () => {
             if (ul.childElementCount > 0) {
-                for (let i = 0; i < ul.childElementCount; i++) {
+                for (let i = ul.childElementCount -1; i >= 0; i--) {
                     let li = ul.childNodes[i];
                     li.remove();
                 }
