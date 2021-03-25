@@ -33,3 +33,20 @@ main{
 #movie-title-select{
 width: 200px;
 }
+
+@media only screen and (max-width: 1150px) {
+    main {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    form {
+        width: fit-content;
+    }
+    img{
+        display: none
+    };
+    #text-input{
+        width: auto;
+    }
+}
