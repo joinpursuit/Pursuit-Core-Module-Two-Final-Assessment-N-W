@@ -34,7 +34,7 @@ main{
 width: 200px;
 }
 
-@media only screen and (max-width: 1150px) {
+@media only screen and (max-width: 800px) {
     main {
         flex-direction: column;
         align-items: center;
