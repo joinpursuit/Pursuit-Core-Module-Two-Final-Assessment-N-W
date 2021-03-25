@@ -19,7 +19,7 @@
 
 ## Assessment Details
 
-Create an app using the [Studio Ghibli API](https://ghibliapi.herokuapp.com/#) that allows users to view and review each movie.
+Create an app using the [Studio Ghibli API](Moveie) that allows users to view and review each movie.
 
 This app should have (in order of placement in the HTML):
 
