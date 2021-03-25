@@ -1,5 +1,4 @@
 const select = document.querySelector("select");
-const reviews = document.querySelector("#submitted-reviews");
 const form = document.querySelector("form");
 const ul = document.querySelector("#submitted-reviews");
 
@@ -38,14 +37,11 @@ select.addEventListener("change", async (e) => {
 form.addEventListener("submit", async (e) => {
   e.preventDefault();
   const input = document.querySelector("input[type=text]")
-  console.log(input.calue)
-  if (input.value !== ""){
+  if (input.value.length > 0 && select.value !== ""  ){
     const li = document.createElement("li");
     li.innerText = `${title.textContent} ${input.value}`;
     li.innerHTML = `<b>${title.textContent}:</b> ${input.value}`;
     ul.appendChild(li);
-  }else{
-    return 
   }
   input.value = ""
 });
