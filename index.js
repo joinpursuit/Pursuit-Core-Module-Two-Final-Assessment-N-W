@@ -7,7 +7,6 @@ const getFilms = async () => {
     const res = await axios.get("https://ghibliapi.herokuapp.com/films");
     debugger;
     res.data.forEach((film) => {
-     
       const option = document.createElement("option");
       option.innerText = film.title;
       select.appendChild(option);
@@ -19,28 +18,28 @@ const getFilms = async () => {
 };
 getFilms();
 
-const createSection = async () => {
-  try {
-    const res = await axios.get("https://ghibliapi.herokuapp.com/films");
-    res.data.forEach((film) => {
-  debugger
-      const title = document.createElement("h3");
-      const releaseYear = document.createElement("p");
-      const description = document.createElement("p");
-      title.innerText = film.title;
-      releaseYear.innerText = film.release_date;
-      description.innerText = film.description;
-      section.appendChild(title);
-      section.appendChild(releaseYear);
-      section.appendChild(description);
-    //   section.innerText = "";
-    });
-  } catch (error) {
-    console.log(error);
-  }
-};
+// const createSection = async () => {
+//   try {
+//     const res = await axios.get("https://ghibliapi.herokuapp.com/films");
+//     res.data.forEach((film) => {
+//   debugger
+//       const title = document.createElement("h3");
+//       const releaseYear = document.createElement("p");
+//       const description = document.createElement("p");
+//       title.innerText = film.title;
+//       releaseYear.innerText = film.release_date;
+//       description.innerText = film.description;
+//       section.appendChild(title);
+//       section.appendChild(releaseYear);
+//       section.appendChild(description);
+//     //   section.innerText = "";
+//     });
+//   } catch (error) {
+//     console.log(error);
+//   }
+// };
 
-createSection();
+// createSection();
 
 select.addEventListener("click", async (e) => {
     debugger
@@ -57,33 +56,50 @@ select.addEventListener("click", async (e) => {
           section.appendChild(title);
           section.appendChild(releaseYear);
           section.appendChild(description);
+        //   section.replace(title);
         //   section.innerText = "";
         });
       } catch (error) {
         console.log(error);
       }
+});
+
+form.addEventListener("click", async (e) => {
+    e.preventDefault();
+    debugger
+    try {
+        const res = await axios.get("https://ghibliapi.herokuapp.com/films");
+        res.data.forEach((film) => {
+        const textInput = document.querySelector("#review-text-input");
+        debugger
+        const reviewsUl = document.querySelector("#reviews")
+        const reviewLi = document.createElement("li");
+        reviewLi.innerHTML = `<b>${film.title}</b> ${textInput.value}`
+        debugger
+        reviewsUl.appendChild(reviewLi);
+        textInput.value = "";
+    });
+    } catch (error) {
+        console.log(error);
+    }
    
 });
 
-form.addEventListener("click", (e) => {
-    e.preventDefault();
-    debugger
-    const textInput = document.querySelector("#review-text-input");
-    debugger
-    const reviewsUl = document.querySelector("#reviews")
-    const reviewLi = document.createElement("li");
-    reviewLi.innerHTML = `<b>${film.title}</b> ${textInput.value}`
-    reviewsUl.appendChild(reviewLi);
-    textInput.value = "";
-})
+    //   const reviewText = document.querySelector("#review-text-input");
+    //   const submit = document.querySelector("#submit-input")
+    //   const reviewsUl = document.querySelector("#reviews");
+    //   const reviewLi = document.createElement("li");
+    //   const reviewBody = reviewText.value
+    //   reviewLi.innerHTML = `<b>${title.textContent}:</b> ${reviewBody}`;
+    //   reviewsUl.appendChild(reviewLi);
+    //   reviewText.value = "";
+    // });
 
 
 
 
 
-
-
-/*March 23rd*/
+/*March 24th*/
 // const select = document.querySelector("select");
 // const form = document.querySelector("form");
 
