@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./index.css" />
+    <link rel="stylesheet" href="./index.css"/>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="./index.js" defer></script>
     <title>Ghibli Review App</title>
@@ -21,21 +21,18 @@
 
     <main>
       <select>
-        <option disabled selected></option>
+         <option disabled selected></option>
       </select>
 
       <section id="display-info">
-        <h3 id="title"></h3>
-        <p id="release-year"></p>
-        <p id="description"></p>
       </section>
 
       <form>
-        <input id="review-text-input" type="text" />
-        <input type="submit" />
+        <input id="review-text-input" type="text">
+        <input id="submit-input" type="submit">
       </form>
 
-      <ul></ul>
+      <ul id="reviews"></ul>
     </main>
   </body>
 </html>
