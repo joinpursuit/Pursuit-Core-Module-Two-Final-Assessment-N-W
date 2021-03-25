@@ -19,7 +19,7 @@ const getMovies = async (e) => {
 		// loop movie list
 		movieList.data.forEach((movie) => {
 			const movieTitle = movie.title;
-			// create option
+			// create options
 			const option = document.createElement("option");
 			option.innerHTML = movieTitle;
 			select.appendChild(option);
@@ -79,11 +79,11 @@ const getMovieInfo = async (e) => {
 	}
 };
 
-const printReview = (e) => {
+const printReview = (e, selectedMovie) => {
 	e.preventDefault();
 	const review = input.value;
-	const li = document.createElement("li");
-	li.textContent = review;
+    const li = document.createElement("li");
+	li.innerHTML = `<b>${title.textContent}:</b> ${review}`;
 	ul.appendChild(li);
 	input.value = "";
 };
