@@ -37,10 +37,15 @@ select.addEventListener("change", async (e) => {
 
 form.addEventListener("submit", async (e) => {
   e.preventDefault();
-  const li = document.createElement("li");
   const input = document.querySelector("input[type=text]")
-  li.innerText = `${title.textContent} ${input.value}`;
-  li.innerHTML = `<b>${title.textContent}:</b> ${input.value}`;
-  ul.appendChild(li);
+  console.log(input.calue)
+  if (input.value !== ""){
+    const li = document.createElement("li");
+    li.innerText = `${title.textContent} ${input.value}`;
+    li.innerHTML = `<b>${title.textContent}:</b> ${input.value}`;
+    ul.appendChild(li);
+  }else{
+    return 
+  }
   input.value = ""
 });
