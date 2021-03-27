@@ -1,0 +1,47 @@
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: lavender;
+}
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  width: 60%;
+}
+header {
+  display: flex;
+  font-family: monospace;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(135, 206, 235);
+  height: 150px;
+  width: 70%;
+  margin-bottom: 30px;
+  padding: 10px;
+  text-align: center;
+}
+header > img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 150px;
+  font-family: monospace;
+}
+
+input[type="text"] {
+  width: 400px;
+}
+
+@media only screen and (max-width:400px) {
+  /* For mobile phones: */
+body, main, header, header > img, h1 {
+    width:100%;
+  }
+  /* img {
+
+
+  } */
+ 
+}
